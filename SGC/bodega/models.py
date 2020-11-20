@@ -46,13 +46,13 @@ class Producto(models.Model):
     BARRIL = 'Barril 30lts'
 
     FORMATO = [
-        (BOTELLITA, 'Botella 330cc'),
+        (BOTELLITA,'Botella 330cc'),
         (BOTELLA,'Botella 1000cc'),
         (GROULER,'Grouler'),
         (BARRIL ,'Barril 30lts'),
     ]
     nombre_producto = models.CharField(max_length=50)
-    formato_producto = models.models.CharField(max_length=50, choices=FORMATO)
+    formato_producto = models.CharField(max_length=50, choices=FORMATO)
     stock_producto = models.IntegerField()
     class Meta: 
         verbose_name = "Producto"
