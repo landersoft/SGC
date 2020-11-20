@@ -18,7 +18,7 @@ class Batch(models.Model):
     fecha_maduracion = models.DateField(blank=True)
     fecha_embotellado = models.DateField(blank=True)
     cantidad_litros = models.IntegerField(blank=True)
-    tipo = models.ForeignKey('Tipo_cerveza', related_name="Tipo de Cerveza", on_delete=models.PROTECT, verbose_name="Tipo de Cerveza")
+    tipo = models.ForeignKey('Tipo_cerveza', related_name="Tipo Cerveza", on_delete=models.PROTECT, verbose_name="Tipo de Cerveza")
 
     class Meta:
         verbose_name = "Batch"
