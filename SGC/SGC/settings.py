@@ -56,7 +56,7 @@ ROOT_URLCONF = 'SGC.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['SGC/SGC/templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
