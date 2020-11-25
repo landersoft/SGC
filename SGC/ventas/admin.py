@@ -4,5 +4,5 @@ from .models import Cliente,Detalle_Venta, Venta
 # Register your models here.
 
 admin.site.register(Cliente)
-admin.site.register(Detalle_Venta)
 admin.site.register(Venta)
+admin.site.register(Detalle_Venta)

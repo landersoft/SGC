@@ -1,5 +1,5 @@
 from django.db import models
-from bodega.models import Producto, Tipo_cerveza
+from bodega.models import Tipo_cerveza, Batch,Insumo,Producto
 from django.conf import settings 
 
 # Create your models here.
@@ -30,8 +30,8 @@ class Venta(models.Model):
     estado = models.CharField(max_length=50, choices=ESTADO)
 
 class Detalle_Venta(models.Model):
-    venta = models.ForeignKey('ventas.Venta', related_name="venta", on_delete=models.PROTECT, verbose_name="venta")
-    producto = models.ForeignKey('ventas.Producto', related_name="Producto", on_delete=models.PROTECT, verbose_name="producto")
+    venta = models.ForeignKey('Venta', related_name="venta", on_delete=models.PROTECT, verbose_name="venta")
+    producto = models.ForeignKey('bodega.Producto', related_name="Producto", on_delete=models.PROTECT, verbose_name="producto")
     cantidad = models.IntegerField()
     def __str__(self):
         return str(self.venta)
