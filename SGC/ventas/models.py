@@ -33,5 +33,8 @@ class Detalle_Venta(models.Model):
     venta = models.ForeignKey('Venta', related_name="venta", on_delete=models.PROTECT, verbose_name="venta")
     producto = models.ForeignKey('bodega.Producto', related_name="Producto", on_delete=models.PROTECT, verbose_name="producto")
     cantidad = models.IntegerField()
+    class Meta:
+        verbose_name = "Detalle de Venta"
+        verbose_name_plural = "Detalle de Ventas"
     def __str__(self):
         return str(self.venta)
